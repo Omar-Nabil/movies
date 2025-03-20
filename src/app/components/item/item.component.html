@@ -1,0 +1,9 @@
+<div class="position-relative item" [routerLink]="'/details/'+Movie.id+'/'+Movie.type">
+  <img class="w-100" [src]="'https://image.tmdb.org/t/p/w500'+Movie.poster_path">
+  <p class="position-absolute end-0 top-0 bg-info p-1">{{Movie.vote_average | number:'1.0-1'}}</p>
+  <div class="layer">
+    <p style="font-size: 15px;">{{Movie.overview | overview:20}}</p>
+  </div>
+</div>
+<p class="mb-0">{{Movie.title}}</p>
+<p>{{Movie.name}}</p>

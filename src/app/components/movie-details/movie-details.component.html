@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row py-4">
+    <div class="col-md-4">
+      <img class="w-100" [src]="'https://image.tmdb.org/t/p/w500'+details?.poster_path" alt="Error">
+    </div>
+    <div class="col-md-8">
+      <h1>{{details?.title}}{{details?.name}}</h1>
+      <h6 style="color: #4578B0;" class="mb-3">{{details?.tagline}}</h6>
+      <ul class="list-unstyled d-flex mb-3">
+        <li class="bg-info m-1 p-1 rounded" *ngFor="let genre of details?.genres">{{genre.name}}</li>
+      </ul>
+      <ul class="list-unstyled">
+        <li class="display-6 mb-2">Vote : {{details?.vote_average}}</li>
+        <li class="display-6 mb-2">Vote count : {{details?.vote_count}}</li>
+        <li class="display-6 mb-2">popularity : {{details?.popularity}}</li>
+        <li class="display-6 mb-5">release date : {{details?.release_date}}{{details?.first_air_date}}</li>
+      </ul>
+      <h6 style="color: #4578B0;">{{details?.overview}}</h6>
+    </div>
+  </div>
+</div>

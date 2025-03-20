@@ -1,0 +1,16 @@
+<div class="container">
+  <nav aria-label="..." class="pt-4 d-flex justify-content-center">
+    <ul class="pagination">
+      <li class="page-item" *ngFor="let page of pages"><a (click)="getTrendingMovies('tv', page)"
+          class="page-link">{{page}}</a></li>
+    </ul>
+  </nav>
+  <input [(ngModel)]="search" type="text"
+    class="w-25 d-block ms-auto bg-transparent border rounded my-3 text-white p-1 px-2 form-control"
+    placeholder="Search...">
+  <div class="row py-4">
+    <div class="col-md-2 col-sm-4 col-8" *ngFor="let item of TrendingMovies|searchTv:search">
+      <app-item class="col-2" [Movie]="item"></app-item>
+    </div>
+  </div>
+</div>

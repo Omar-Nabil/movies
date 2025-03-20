@@ -1,0 +1,22 @@
+.layer {
+  overflow: hidden;
+  top: 100%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: all .6s;
+}
+.item {
+  overflow: hidden;
+}
+img {
+  transition: all .9s;
+}
+.item:hover .layer {
+  top: 0;
+}
+.item:hover img {
+  transform: scale(1.2);
+}

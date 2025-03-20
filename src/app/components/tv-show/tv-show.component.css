@@ -1,0 +1,16 @@
+.page-link {
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.page-link:hover {
+  color: black;
+  background-color: white;
+}
+::placeholder {
+  color: white;
+  opacity: 1;
+  /* Firefox */
+}

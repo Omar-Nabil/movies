@@ -1,0 +1,50 @@
+<app-slider [MoviesForSlider]="TrendingTv"></app-slider>
+<div class="container">
+  <div class="row py-4">
+    <div class="col-md-4">
+      <div class=" h-100 d-flex justify-content-center flex-column">
+        <span style="width: 30%;display: block;border-bottom: 2px solid 	#999999;margin-bottom: 12px;"></span>
+        <h2>Trending Movies<br>to Watch Right Now</h2>
+        <p class=" mb-0" style="color: #4578B0;"> Most Watched Movies by days</p>
+        <span style="width: 70%;display: block;border-bottom: 2px solid 	#999999;margin-top: 12px;"></span>
+      </div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-8" *ngFor="let item of TrendingMovies">
+      <app-item [Movie]="item"></app-item>
+    </div>
+  </div>
+
+  <div class="row py-4">
+    <div class="col-md-4">
+      <div class=" h-100 d-flex justify-content-center flex-column">
+        <span style="width: 30%;display: block;border-bottom: 2px solid 	#999999;margin-bottom: 12px;"></span>
+        <h2>Trending Tv<br>to Watch Right Now</h2>
+        <p class="mb-0" style="color: #4578B0;">Most Watched Movies by days</p>
+        <span style="width: 70%;display: block;border-bottom: 2px solid 	#999999;margin-top: 12px;"></span>
+      </div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-8" *ngFor="let item of TrendingTv">
+      <app-item [Movie]="item"></app-item>
+    </div>
+  </div>
+
+  <div class="row py-4">
+    <div class="col-md-4">
+      <div class=" h-100 d-flex justify-content-center flex-column">
+        <span style="width: 30%;display: block;border-bottom: 2px solid 	#999999;margin-bottom: 12px;"></span>
+        <h2>Trending People<br>to Watch Right Now</h2>
+        <p class="mb-0" style="color: #4578B0;">Most Watched Movies by days</p>
+        <span style="width: 70%;display: block;border-bottom: 2px solid 	#999999;margin-top: 12px;"></span>
+      </div>
+    </div>
+    <div class="col-md-2 col-sm-4 col-8" *ngFor="let item of TrendingPeople">
+      <div class="item">
+        <img class="w-100" [src]="'https://image.tmdb.org/t/p/w500'+item.profile_path">
+        <!-- <div class="layer">
+          <p style="font-size: 15px;">{{item.overview.split(" ").splice(0,10).join(" ")}}</p>
+        </div> -->
+      </div>
+      <p>{{item.name}}</p>
+    </div>
+  </div>
+</div>
